@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-center">{{ msg }}</h1>
+  <h1 class="text-center">{{ props.msg }}</h1>
 
   <p class="text-green-500 text-center">
     <a href="https://vitejs.dev/guide/features.html" target="_blank"
@@ -12,7 +12,7 @@
   </p>
 
   <button
-    class="bg-green-500 hover:bg-green-700 text-white p-2 rounded mx-auto block"
+    class="bg-green-500 hover:bg-[#185a0b] text-white p-2 rounded mx-auto block"
     @click="state.count++"
   >
     count is: {{ state.count }}
@@ -26,7 +26,7 @@
 <script setup>
 import { defineProps, reactive } from "vue";
 
-defineProps({
+const props = defineProps({
   msg: String,
 });
 
